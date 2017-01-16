@@ -1,0 +1,58 @@
+﻿@*//Copyright (c) Autodesk, Inc. All rights reserved
+//Autodesk Developer Network (ADN)
+//Permission to use, copy, modify, and distribute this software 
+//in object code form for any purpose and without fee is hereby granted,
+//provided that the above copyright notice appears in all copies and that
+//both that copyright notice and the limited warranty and restricted rights
+//notice below appear in all supporting documentation.
+//AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS. AUTODESK SPECIFICALLY 
+//DISCLAIMS ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. AUTODESK, INC. 
+//DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE UNINTERRUPTED OR ERROR FREE.*@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+ <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.css" />     
+<script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>
+ 
+    <link href="@Url.Content("~/Content/w2ui.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/w2ui.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui.min.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.csv-0.71.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Autodesk.ADN.Toolkit.ViewData.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Autodesk.ADN.Toolkit.Viewer.js")" type="text/javascript"></script>
+      
+</head>
+
+<body>
+
+     <section id="main">
+            @RenderBody()
+    </section>
+     <div id="divLayout" style="height: 800px;"></div>  
+
+    <div id="divModelPanel" style="visibility:hidden"></div>  
+    <div id="divModelButtons" style="visibility:hidden"></div>  
+    <div id="divModelTree" style="visibility:hidden"></div>  
+
+      <input id="myInputTask" type="file" style="visibility:hidden" />
+     <input id="myInputModel" type="file" style="visibility:hidden" />
+
+    <div id="divTBPanel"  style="height: 200px;visibility:hidden" ></div>  
+    <div id="divTButtons" style="visibility:hidden"></div>  
+    <div id="divTBContainer" style="visibility:hidden"></div>  
+
+     <input type="text" style="border-style: hidden;" id="defaultURN" name="defaultURN" value = @ViewBag.defaultURN />
+    <input type="text" style="border-style: hidden;" id="myBucket" name="myBucket" value = @ViewBag.mybucket />
+    @*Hidden text to retrieve the access token in javascript*@
+    <input type="text" style="border-style: hidden;" id="AccessToken" name="AccessToken" value = @ViewBag.AccessToken />
+    <input type="textarea"  style="border-style: hidden;" id="ExistingTasks"  value = @ViewBag.ExistingTasks />
+</body>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Timeliner_new_ui.js")"></script>
+
+</html>
+<!DOCTYPE html>
