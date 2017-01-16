@@ -40,8 +40,7 @@ A sample simulates Navisworks timeline with [Viewer](https://developer.autodesk.
 
 * Simulation uses 'end date' only   
 * Simulation implements 'Construct' type only
-
-Please refer to the video [ADN-Viewer-Timeliner.mp4](https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api/blob/master/ADN-Viewer-Timeliner.mp4) for a demo of the detailed workflow. 
+ 
 
 ## License
 
